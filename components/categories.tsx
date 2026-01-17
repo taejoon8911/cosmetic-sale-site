@@ -27,7 +27,7 @@ const categories = [
 
 export default function Categories() {
   return (
-    <section className="py-24 px-6">
+    <section id="categories" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">Our Categories</p>

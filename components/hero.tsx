@@ -1,8 +1,17 @@
+"use client"
+
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Hero() {
+  const scrollToCategories = () => {
+    const categoriesSection = document.getElementById("categories")
+    if (categoriesSection) {
+      categoriesSection.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20">
       {/* Background Image */}
@@ -31,12 +40,16 @@ export default function Hero() {
           피부 본연의 아름다움을 깨워보세요
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="px-8 py-6 text-sm tracking-widest rounded-none">
+          <Button
+            size="lg"
+            className="px-8 py-6 text-sm tracking-widest rounded-none"
+            onClick={scrollToCategories}
+          >
             컬렉션 보기
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
           <Link
-            href="#"
+            href="/brand-story"
             className="text-sm tracking-wide underline underline-offset-4 hover:text-primary transition-colors"
           >
             브랜드 스토리

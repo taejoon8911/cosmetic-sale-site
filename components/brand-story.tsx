@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -37,9 +38,12 @@ export default function BrandStory() {
               variant="outline"
               size="lg"
               className="rounded-none px-8 py-6 text-sm tracking-widest bg-transparent"
+              asChild
             >
-              더 알아보기
-              <ArrowRight className="w-4 h-4 ml-2" />
+              <Link href="/brand-story">
+                더 알아보기
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </Button>
           </div>
         </div>
